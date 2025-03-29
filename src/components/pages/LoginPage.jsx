@@ -1,7 +1,7 @@
-import React from "react";
+import AuthLayout from "../templates/AuthLayout";
 
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return <AuthLayout />;
 };
 
 export default LoginPage;
