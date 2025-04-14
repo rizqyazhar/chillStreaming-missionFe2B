@@ -1,7 +1,7 @@
-import Navbar from "../molecules/Navbar";
+import HomeLayout from "../layouts/HomeLayout";
 
 const HomePage = () => {
-  return <Navbar />;
+  return <HomeLayout />;
 };
 
 export default HomePage;
