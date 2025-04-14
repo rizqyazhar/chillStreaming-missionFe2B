@@ -18,7 +18,14 @@ const LoginPage = () => {
         type='password'
         placeholder='Masukkan kata sandi'
         htmlFor='password'
-        labelText='Kata Sandi'>
+        labelText='Kata Sandi'
+      />
+      <InputFields
+        id='password'
+        type='password'
+        placeholder='Masukkan kata sandi'
+        htmlFor='password'
+        labelText='Konfirmasi Kata Sandi'>
         <div className='w-full flex justify-between font-lato mt-1.5'>
           <p className='text-light-secondary text-[10px] md:text-base tracking-[.2px] cursor-default'>
             Belum punya akun?{" "}
