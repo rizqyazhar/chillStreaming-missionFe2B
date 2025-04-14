@@ -1,7 +1,12 @@
 import AuthLayout from "../layouts/AuthLayout";
+import InputFields from "../molecules/InputFields";
 
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return (
+    <AuthLayout title='Masuk' subTitle='Selamat Datang Kembali!' bgSrc='login'>
+      <InputFields />
+    </AuthLayout>
+  );
 };
 
 export default LoginPage;
