@@ -1,4 +1,6 @@
+import Button from "../atoms/Button";
 import AuthLayout from "../layouts/AuthLayout";
+import ButtonFields from "../molecules/ButtonFields";
 import InputFields from "../molecules/InputFields";
 
 const LoginPage = () => {
@@ -31,6 +33,7 @@ const LoginPage = () => {
           </p>
         </div>
       </InputFields>
+      <ButtonFields />
     </AuthLayout>
   );
 };
