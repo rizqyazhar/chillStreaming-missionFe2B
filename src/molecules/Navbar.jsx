@@ -3,7 +3,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 const Navbar = ({ genreTab }) => {
   return (
     <>
-      <nav className='max-w-screen px-5 py-1.5 md:px-10 md:py-6 bg-pageHeaderBackground flex justify-between'>
+      <nav className='max-w-screen px-5 py-1.5 md:px-20 md:py-6 bg-pageHeaderBackground flex justify-between'>
         <div className='flex items-center gap-3 md:gap-20'>
           <a to='/home'>
             <picture>

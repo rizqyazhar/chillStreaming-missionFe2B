@@ -1,6 +1,6 @@
 const PotraitBox = ({ src }) => {
   return (
-    <div className='card w-[95px] h-[145px] md:w-60 md:h-full cursor-pointer'>
+    <div className='w-[95px] h-[145px] md:w-60 md:h-full cursor-pointer'>
       <img
         src={src}
         className='w-full h-full object-cover object-center rounded-lg'

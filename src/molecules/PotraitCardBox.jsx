@@ -16,8 +16,8 @@ const PotraitCardBox = ({ title }) => {
     slidesToScroll: 1,
     initialSlide: randomInitialSlide,
     swipeToSlide: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow bottom='42' />,
+    prevArrow: <PrevArrow bottom='42' />,
     responsive: [
       {
         breakpoint: 1024,
@@ -42,7 +42,7 @@ const PotraitCardBox = ({ title }) => {
           {title}
         </h3>
       </div>
-      <div className='w-full flex flex-col gap-x-11'>
+      <div className='w-full flex flex-col'>
         <Slider {...settings}>
           {db.map((l) => (
             <PotraitCard key={l.id} src={l.img[0]} />

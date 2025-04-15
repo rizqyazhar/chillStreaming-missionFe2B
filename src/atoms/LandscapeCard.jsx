@@ -1,6 +1,6 @@
 const LandscapeBox = ({ src }) => {
   return (
-    <div className='w-[309px] h-[151px] md:w-[302px] md:h-[162px] cursor-pointer'>
+    <div className='w-[370px] h-full md:w-[284px] md:h-full cursor-pointer'>
       <img
         src={src}
         className='w-full h-full object-cover object-center rounded-lg'

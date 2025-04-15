@@ -9,7 +9,10 @@ const HomePage = () => {
     <HomeLayout>
       <Hero />
       <Content>
+        <LandscapeCardBox title='Melanjutkan Tonton Film' />
         <PotraitCardBox title='Top Rating Film dan Series Hari ini' />
+        <PotraitCardBox title='Film Trending' />
+        <PotraitCardBox title='Rilis Baru' />
       </Content>
     </HomeLayout>
   );
