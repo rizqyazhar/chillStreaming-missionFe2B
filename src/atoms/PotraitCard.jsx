@@ -1,6 +1,6 @@
-const PotraitBox = ({ src, width = "234px", height = "356px" }) => {
+const PotraitBox = ({ src }) => {
   return (
-    <div className={`md:w-${width} md:h-${height} cursor-pointer`}>
+    <div className='card w-[95px] h-[145px] md:w-60 md:h-full cursor-pointer'>
       <img
         src={src}
         className='w-full h-full object-cover object-center rounded-lg'
