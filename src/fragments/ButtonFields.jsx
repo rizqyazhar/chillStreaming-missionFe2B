@@ -1,4 +1,4 @@
-import Button from "../atoms/Button";
+import Button from "../elements/Button";
 
 const ButtonFields = () => {
   return (

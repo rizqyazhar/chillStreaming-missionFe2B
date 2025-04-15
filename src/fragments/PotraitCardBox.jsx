@@ -1,9 +1,9 @@
-import PotraitCard from "../atoms/PotraitCard";
+import PotraitCard from "../elements/PotraitCard";
 import db from "../../db.json";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NextArrow, PrevArrow } from "../atoms/CustomArrow";
+import { NextArrow, PrevArrow } from "../elements/CustomArrow";
 
 const PotraitCardBox = ({ title }) => {
   const randomInitialSlide = Math.floor(Math.random() * db.length);

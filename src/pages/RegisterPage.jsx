@@ -1,7 +1,7 @@
-import Button from "../atoms/Button";
+import Button from "../elements/Button";
 import AuthLayout from "../layouts/AuthLayout";
-import ButtonFields from "../molecules/ButtonFields";
-import InputFields from "../molecules/InputFields";
+import ButtonFields from "../fragments/ButtonFields";
+import InputFields from "../fragments/InputFields";
 import { BiSolidHide } from "react-icons/bi";
 
 const LoginPage = () => {

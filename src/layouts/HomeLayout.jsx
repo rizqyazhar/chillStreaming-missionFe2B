@@ -1,5 +1,5 @@
-import Navbar from "../molecules/Navbar";
-import Footer from "../molecules/Footer";
+import Navbar from "../fragments/Navbar";
+import Footer from "../fragments/Footer";
 
 const HomeLayout = ({ children, genreTab }) => {
   return (

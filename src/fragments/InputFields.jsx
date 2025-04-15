@@ -1,5 +1,5 @@
-import Input from "../atoms/Input";
-import Label from "../atoms/Label";
+import Input from "../elements/Input";
+import Label from "../elements/Label";
 
 const InputFields = ({
   id,

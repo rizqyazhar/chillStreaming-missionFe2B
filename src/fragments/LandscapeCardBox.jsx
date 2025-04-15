@@ -1,9 +1,9 @@
-import LandscapeCard from "../atoms/LandscapeCard";
+import LandscapeCard from "../elements/LandscapeCard";
 import db from "../../db.json";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NextArrow, PrevArrow } from "../atoms/CustomArrow";
+import { NextArrow, PrevArrow } from "../elements/CustomArrow";
 
 const LandscapeCardBox = ({ title }) => {
   const randomInitialSlide = Math.floor(Math.random() * db.length);
