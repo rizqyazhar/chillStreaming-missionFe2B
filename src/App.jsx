@@ -4,6 +4,7 @@ import RegisterPage from "./pages/RegisterPage";
 import HomePage from "./pages/HomePage";
 import FilmsPage from "./pages/FilmsPage";
 import SeriesPage from "./pages/SeriesPage";
+import MylistPage from "./pages/MylistPage";
 
 const router = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
   { path: "/home", element: <HomePage /> },
   { path: "/films", element: <FilmsPage /> },
   { path: "/series", element: <SeriesPage /> },
+  { path: "/mylist", element: <MylistPage /> },
 ]);
 
 const App = () => {

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../elements/Button";
 import AuthLayout from "../layouts/AuthLayout";
 import ButtonFields from "../fragments/ButtonFields";
@@ -24,14 +25,14 @@ const LoginPage = () => {
         <div className='w-full flex justify-between font-lato mt-1.5'>
           <p className='text-light-secondary text-[10px] md:text-base tracking-[.2px] cursor-default'>
             Belum punya akun?{" "}
-            <a
+            <Link
               to='/register'
               className='text-white text-[10px] md:text-sm cursor-pointer'>
               Daftar
-            </a>
+            </Link>
           </p>
           <p className='text-white text-[10px] md:text-base cursor-pointer'>
-            <a to='register'>Lupa kata sandi?</a>
+            <Link to='register'>Lupa kata sandi?</Link>
           </p>
         </div>
       </InputFields>

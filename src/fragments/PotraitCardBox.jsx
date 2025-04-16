@@ -16,8 +16,8 @@ const PotraitCardBox = ({ title }) => {
     slidesToScroll: 1,
     initialSlide: randomInitialSlide,
     swipeToSlide: true,
-    nextArrow: <NextArrow bottom='42' />,
-    prevArrow: <PrevArrow bottom='42' />,
+    nextArrow: <NextArrow nextBottom='150px' />,
+    prevArrow: <PrevArrow prevBottom='150px' />,
     responsive: [
       {
         breakpoint: 1024,

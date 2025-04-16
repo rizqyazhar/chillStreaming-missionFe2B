@@ -16,8 +16,8 @@ const LandscapeCardBox = ({ title }) => {
     slidesToScroll: 1,
     initialSlide: randomInitialSlide,
     swipeToSlide: true,
-    nextArrow: <NextArrow bottom='15' />,
-    prevArrow: <PrevArrow bottom='15' />,
+    nextArrow: <NextArrow nextBottom='60px' />,
+    prevArrow: <PrevArrow prevBottom='60px' />,
     responsive: [
       {
         breakpoint: 1024,
