@@ -1,8 +1,17 @@
+import { useState } from "react";
 import PackageCard from "../../elements/PackageCard";
+import PurchaseTutorial from "../../elements/PurchaseTutorial";
+import PurchaseCountDown from "../../elements/PurchaseCountDown";
 
 const PurchaseContent = () => {
+  const [purchaseClick, setPurchaseClick] = useState(false);
+  const handleClick = () => {
+    setPurchaseClick((prev) => !prev);
+  };
+
   return (
     <section className='flex flex-col gap-5 md:gap-10 p-10 lg:px-20 font-lato text-light-primary'>
+      {purchaseClick && <PurchaseCountDown />}
       <h3 className='font-bold text-xl md:text-[32px] cursor-default'>
         Ringkasan Pembayaran
       </h3>
@@ -82,8 +91,11 @@ const PurchaseContent = () => {
               </p>
             </div>
           </div>
+          {purchaseClick && <PurchaseTutorial />}
+
           <button
-            type='submit'
+            type='button'
+            onClick={handleClick}
             className='place-self-start bg-primary-400 rounded-full px-4 py-2 text-sm lg:text-base font-bold'>
             Bayar
           </button>

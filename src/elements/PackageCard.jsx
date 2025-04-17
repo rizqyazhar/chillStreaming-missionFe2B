@@ -8,7 +8,7 @@ const PackageCard = ({
 }) => {
   return (
     <div
-      className={`${cardWidth} flex flex-col gap-6 p-6 rounded-xl bg-linear-to-r from-[#537cd4]/100 from-1% to-primary-100 to-99% font-lato text-light-primary`}>
+      className={`${cardWidth} h-fit flex flex-col gap-6 p-6 rounded-xl bg-linear-to-r from-[#537cd4]/100 from-1% to-primary-100 to-99% font-lato text-light-primary`}>
       <h5 className='w-fit rounded-full bg-extraBackground px-5 py-2.5 font-semibold text-base'>
         {packageTitle}
       </h5>
