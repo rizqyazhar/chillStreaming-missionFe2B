@@ -1,7 +1,7 @@
 import SeeAll from "../elements/SeeAll";
 import Content from "../fragments/Content";
-import Mylist from "../fragments/Mylist";
 import HomeLayout from "../layouts/HomeLayout";
+import Mylist from "../fragments/Mylist";
 
 const ProfilePage = () => {
   return (

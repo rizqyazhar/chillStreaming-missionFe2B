@@ -13,7 +13,7 @@ const DropdownProfile = () => {
         Profil Saya
       </Link>
       <Link
-        to='membership'
+        to='/membership'
         className='text-xs md:text-sm flex items-center w-full  hover:bg-extraBackground transition duration-700 gap-1.5 px-3 py-2'>
         <MdOutlineStar className='text-sm md:text-lg' />
         Ubah Premium
