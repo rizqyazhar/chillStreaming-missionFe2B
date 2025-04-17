@@ -3,9 +3,12 @@ const PackageCard = ({
   packagePrice,
   packageAmountAccount,
   packageQualityDesc,
+  cardWidth = "w-full",
+  buttonWidth = "w-full",
 }) => {
   return (
-    <div className='flex flex-col gap-6 p-6 rounded-xl bg-linear-to-r from-[#537cd4]/100 from-1% to-primary-100 to-99%'>
+    <div
+      className={`${cardWidth} flex flex-col gap-6 p-6 rounded-xl bg-linear-to-r from-[#537cd4]/100 from-1% to-primary-100 to-99% font-lato text-light-primary`}>
       <h5 className='w-fit rounded-full bg-extraBackground px-5 py-2.5 font-semibold text-base'>
         {packageTitle}
       </h5>
@@ -29,7 +32,8 @@ const PackageCard = ({
       </div>
       <div className='border border-outlineBorder'></div>
       <div className='flex flex-col items-center gap-1'>
-        <button className='w-full flex items-center rounded-full justify-center px-[26px] py-2.5 bg-light-primary text-primary-300 font-bold text-sm cursor-pointer'>
+        <button
+          className={`${buttonWidth} flex items-center rounded-full justify-center px-[26px] py-2.5 bg-light-primary text-primary-300 font-bold text-sm cursor-pointer`}>
           Langganan
         </button>
         <p className='text-light-primary font-normal text-xs'>
