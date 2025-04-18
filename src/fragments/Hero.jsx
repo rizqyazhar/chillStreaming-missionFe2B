@@ -3,7 +3,7 @@ import { IoVolumeMuteSharp } from "react-icons/io5";
 
 const Hero = ({ children }) => {
   return (
-    <header className='relative max-w-screen flex flex-col justify-center'>
+    <header className='max-w-screen flex flex-col justify-center'>
       <div className='w-full'>
         <picture>
           <source srcSet='/img/landscape/hero.svg' media='(min-width: 768px)' />

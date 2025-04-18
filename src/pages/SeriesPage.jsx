@@ -5,6 +5,7 @@ import PotraitCardBox from "../fragments/PotraitCardBox";
 import LandscapeCardBox from "../fragments/LandscapeCardBox";
 import Genre from "../fragments/genre/Genre";
 import GenreTab from "../fragments/genre/GenreTab";
+import SeriesPopUp from "../fragments/SeriesPopUp";
 
 const FilmsPage = () => {
   return (

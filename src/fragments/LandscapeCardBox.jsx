@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NextArrow, PrevArrow } from "../elements/CustomArrow";
+import SeriesPopUp from "./SeriesPopUp";
 
 const LandscapeCardBox = ({ title }) => {
   const randomInitialSlide = Math.floor(Math.random() * db.length);
@@ -49,6 +50,7 @@ const LandscapeCardBox = ({ title }) => {
           ))}
         </Slider>
       </div>
+      <SeriesPopUp />
     </div>
   );
 };
