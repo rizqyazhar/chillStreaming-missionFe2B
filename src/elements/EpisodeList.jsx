@@ -3,7 +3,7 @@ const EpisodeList = () => {
     <div className='bg-pageHeaderBackground text-light-primary px-5 py-2.5 md:px-16 md:py-6 flex flex-col gap-2 md:gap-7'>
       <h6 className='font-bold text-xs md:text-2xl'>Episode</h6>
       <div className='flex flex-col'>
-        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 bg-grey-800 rounded-sm'>
+        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 hover:bg-grey-800 rounded-sm'>
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             1
           </p>
@@ -26,7 +26,7 @@ const EpisodeList = () => {
             </p>
           </div>
         </div>
-        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 rounded-sm'>
+        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 hover:bg-grey-800 rounded-sm'>
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             2
           </p>
@@ -49,7 +49,7 @@ const EpisodeList = () => {
             </p>
           </div>
         </div>
-        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 rounded-sm'>
+        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 hover:bg-grey-800 rounded-sm'>
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             3
           </p>
@@ -72,7 +72,7 @@ const EpisodeList = () => {
             </p>
           </div>
         </div>
-        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 rounded-sm'>
+        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 hover:bg-grey-800 rounded-sm'>
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             4
           </p>
@@ -95,7 +95,7 @@ const EpisodeList = () => {
             </p>
           </div>
         </div>
-        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 rounded-sm'>
+        <div className='flex items-center gap-3 md:gap-6 px-2 py-2.5 md:px-6 md:py-5 hover:bg-grey-800 rounded-sm'>
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             5
           </p>

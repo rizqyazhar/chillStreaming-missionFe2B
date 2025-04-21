@@ -5,8 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NextArrow, PrevArrow } from "../elements/CustomArrow";
 
-const PotraitCardBox = ({ title }) => {
+const PotraitCardBox = ({ title, setPopup }) => {
   const randomInitialSlide = Math.floor(Math.random() * db.length);
+  const handleOpenPopup = () => {
+    setPopup((prev) => !prev);
+  };
 
   const settings = {
     dots: false,
@@ -45,7 +48,11 @@ const PotraitCardBox = ({ title }) => {
       <div className='w-full flex flex-col'>
         <Slider {...settings}>
           {db.map((l) => (
-            <PotraitCard key={l.id} src={l.img[0]} />
+            <PotraitCard
+              key={l.id}
+              src={l.img[0]}
+              handleOpenPopup={handleOpenPopup}
+            />
           ))}
         </Slider>
       </div>

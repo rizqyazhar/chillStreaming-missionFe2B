@@ -4,10 +4,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NextArrow, PrevArrow } from "../elements/CustomArrow";
-import PopUp from "./Popup";
 
-const LandscapeCardBox = ({ title }) => {
+const LandscapeCardBox = ({ title, setPopup }) => {
   const randomInitialSlide = Math.floor(Math.random() * db.length);
+  const handleOpenPopup = () => {
+    setPopup((prev) => !prev);
+  };
 
   const settings = {
     dots: false,
@@ -46,10 +48,13 @@ const LandscapeCardBox = ({ title }) => {
       <div className='flex flex-col gap-3'>
         <Slider {...settings}>
           {db.map((l) => (
-            <LandscapeCard key={l.id} src={l.img[1]} />
+            <LandscapeCard
+              key={l.id}
+              src={l.img[1]}
+              handleOpenPopup={handleOpenPopup}
+            />
           ))}
         </Slider>
-        <PopUp />
       </div>
     </div>
   );
