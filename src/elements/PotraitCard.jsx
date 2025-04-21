@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const PotraitBox = ({ src }) => {
+const PotraitCard = ({ src }) => {
   return (
     <div
       className={clsx(
@@ -17,4 +17,4 @@ const PotraitBox = ({ src }) => {
   );
 };
 
-export default PotraitBox;
+export default PotraitCard;
