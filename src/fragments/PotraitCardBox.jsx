@@ -1,13 +1,15 @@
+import { useState } from "react";
 import PotraitCard from "../elements/PotraitCard";
-import db from "../../db.json";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NextArrow, PrevArrow } from "../elements/CustomArrow";
+import PopUp from "../fragments/Popup";
 
-const PotraitCardBox = ({ title, setPopup }) => {
-  const randomInitialSlide = Math.floor(Math.random() * db.length);
-  const handleOpenPopup = () => {
+const PotraitCardBox = ({ title, loading, movies }) => {
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [openPopup, setPopup] = useState(false);
+  const handleOpenPopup = (movie) => {
+    setSelectedMovie(movie);
     setPopup((prev) => !prev);
   };
 
@@ -17,10 +19,7 @@ const PotraitCardBox = ({ title, setPopup }) => {
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 1,
-    initialSlide: randomInitialSlide,
     swipeToSlide: true,
-    nextArrow: <NextArrow nextBottom='150px' />,
-    prevArrow: <PrevArrow prevBottom='150px' />,
     responsive: [
       {
         breakpoint: 1024,
@@ -39,22 +38,40 @@ const PotraitCardBox = ({ title, setPopup }) => {
     ],
   };
   return (
-    <div className='w-11/12 relative flex flex-col mx-auto gap-5 md:gap-8 py-5 md:py-10'>
+    <div className='w-11/12 flex flex-col mx-auto gap-5 md:gap-8 py-5 md:py-10'>
       <div className='w-full flex justify-start'>
         <h3 className='font-lato font-bold text-xl md:text-[32px] text-white cursor-default'>
           {title}
         </h3>
       </div>
       <div className='w-full flex flex-col'>
-        <Slider {...settings}>
-          {db.map((l) => (
-            <PotraitCard
-              key={l.id}
-              src={l.img[0]}
-              handleOpenPopup={handleOpenPopup}
-            />
-          ))}
-        </Slider>
+        {loading ? (
+          <h2>Loading...</h2>
+        ) : (
+          <>
+            <Slider {...settings}>
+              {movies.map((movie) => (
+                <PotraitCard
+                  key={movie.id}
+                  src={movie.img[0]}
+                  onClick={() => handleOpenPopup(movie)}
+                />
+              ))}
+            </Slider>
+          </>
+        )}
+        {selectedMovie && (
+          <PopUp
+            openPopup={openPopup}
+            setPopup={setPopup}
+            isSeries={true}
+            key={selectedMovie.id}
+            title={selectedMovie.title}
+            genre={selectedMovie.genre}
+            age={selectedMovie.age}
+            eps={selectedMovie.episode}
+          />
+        )}
       </div>
     </div>
   );

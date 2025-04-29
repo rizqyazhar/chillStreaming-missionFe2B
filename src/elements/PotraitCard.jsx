@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const PotraitCard = ({ src, handleOpenPopup }) => {
+const PotraitCard = ({ src, onClick }) => {
   return (
     <div
       className={clsx(
@@ -9,7 +9,7 @@ const PotraitCard = ({ src, handleOpenPopup }) => {
         `md:w-[200px] md:h-fit`,
         `xl:w-[234px] md:h-fit`
       )}
-      onClick={handleOpenPopup}>
+      onClick={onClick}>
       <img
         src={src}
         className='w-full h-full object-cover object-center rounded-lg'
