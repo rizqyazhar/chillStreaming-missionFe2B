@@ -1,15 +1,6 @@
-import clsx from "clsx";
-
 const PotraitCard = ({ src, onClick }) => {
   return (
-    <div
-      className={clsx(
-        "cursor-pointer",
-        `w-[95px] h-[145px]`,
-        `md:w-[200px] md:h-fit`,
-        `xl:w-[234px] md:h-fit`
-      )}
-      onClick={onClick}>
+    <div className='cursor-pointer' onClick={onClick}>
       <img
         src={src}
         className='w-full h-full object-cover object-center rounded-lg'

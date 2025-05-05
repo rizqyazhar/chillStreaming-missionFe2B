@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import HomeLayout from "../layouts/HomeLayout";
 import Hero from "../fragments/Hero";
 import Content from "../fragments/Content";
@@ -9,50 +8,17 @@ import GenreTab from "../fragments/genre/GenreTab";
 import PopUp from "../fragments/Popup";
 
 const FilmsPage = () => {
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const res = await fetch("/api/movieList");
-        const data = await res.json();
-        setMovies(data);
-      } catch (error) {
-        console.log("Error fetching data", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchMovies();
-  });
   return (
     <HomeLayout genreTab={<GenreTab width='100px' />}>
       <Hero>
         <Genre width='392px' />
       </Hero>
       <Content>
-        <LandscapeCardBox
-          title='Melanjutkan Tonton Film'
-          movies={movies}
-          loading={loading}
-        />
-        <PotraitCardBox
-          title='Film Persembahan Chill'
-          movies={movies}
-          loading={loading}
-        />
-        <PotraitCardBox
-          title='Top Rating Film Hari ini'
-          movies={movies}
-          loading={loading}
-        />
-        <PotraitCardBox
-          title='Film Trending'
-          movies={movies}
-          loading={loading}
-        />
-        <PotraitCardBox title='Rilis Baru' movies={movies} loading={loading} />
+        <LandscapeCardBox title='Melanjutkan Tonton Film' />
+        <PotraitCardBox title='Film Persembahan Chill' />
+        <PotraitCardBox title='Top Rating Film Hari ini' />
+        <PotraitCardBox title='Film Trending' />
+        <PotraitCardBox title='Rilis Baru' />
       </Content>
     </HomeLayout>
   );

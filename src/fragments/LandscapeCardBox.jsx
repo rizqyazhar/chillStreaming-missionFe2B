@@ -4,8 +4,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PopUp from "../fragments/Popup";
+import Dummydata from "../../Dummydata";
+import { NextArrow, PrevArrow } from "../elements/Arrows";
 
-const LandscapeCardBox = ({ title, loading, movies }) => {
+const LandscapeCardBox = ({ title }) => {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [openPopup, setPopup] = useState(false);
   const handleOpenPopup = (movie) => {
@@ -13,23 +15,35 @@ const LandscapeCardBox = ({ title, loading, movies }) => {
     setPopup((prev) => !prev);
   };
 
+  const randomInitialSlide = () => Math.floor(Math.random() * Dummydata.length);
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 4,
     slidesToScroll: 1,
     swipeToSlide: true,
+    initialSlide: randomInitialSlide(),
+    nextArrow: <NextArrow isLandscape={true} />,
+    prevArrow: <PrevArrow isLandscape={true} />,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -38,32 +52,26 @@ const LandscapeCardBox = ({ title, loading, movies }) => {
     ],
   };
   return (
-    <div className='relative w-11/12 mx-auto flex flex-col gap-5 md:gap-6 py-5 md:py-10'>
+    <div className='w-11/12 mx-auto flex flex-col gap-5 md:gap-6 lg:gap-8'>
       <div className='w-full flex justify-start'>
         <h3 className='font-lato font-bold text-xl md:text-[32px] text-white cursor-default'>
           {title}
         </h3>
       </div>
-      <div className='flex flex-col gap-3'>
-        {loading ? (
-          <h2>Loading...</h2>
-        ) : (
-          <>
-            <Slider {...settings}>
-              {movies.map((movie) => (
-                <LandscapeCard
-                  key={movie.id}
-                  src={movie.img[1]}
-                  title={movie.title}
-                  genre={movie.genre}
-                  age={movie.age}
-                  eps={movie.eps}
-                  onClick={() => handleOpenPopup(movie)}
-                />
-              ))}
-            </Slider>
-          </>
-        )}
+      <div className='relative w-full'>
+        <Slider {...settings}>
+          {Dummydata.map((movie) => (
+            <LandscapeCard
+              key={movie.id}
+              src={movie.img[1]}
+              title={movie.title}
+              genre={movie.genre}
+              age={movie.age}
+              eps={movie.eps}
+              onClick={() => handleOpenPopup(movie)}
+            />
+          ))}
+        </Slider>
         {selectedMovie && (
           <PopUp
             openPopup={openPopup}
