@@ -9,7 +9,7 @@ const EpisodeList = () => {
           </p>
           <img
             src='/public/img/landscape/img-32.png'
-            className='w-[58px] md:w-[170px]'
+            className='w-24 md:w-[170px]'
           />
           <div className='flex flex-col gap-1 md:gap-2.5'>
             <div className='flex justify-between items-center'>
@@ -32,7 +32,7 @@ const EpisodeList = () => {
           </p>
           <img
             src='/public/img/landscape/img-33.png'
-            className='w-[58px] md:w-[170px]'
+            className='w-24 md:w-[170px]'
           />
           <div className='flex flex-col gap-2.5'>
             <div className='flex justify-between items-center'>
@@ -55,7 +55,7 @@ const EpisodeList = () => {
           </p>
           <img
             src='/public/img/landscape/img-34.png'
-            className='w-[58px] md:w-[170px]'
+            className='w-24 md:w-[170px]'
           />
           <div className='flex flex-col gap-2.5'>
             <div className='flex justify-between items-center'>
@@ -78,7 +78,7 @@ const EpisodeList = () => {
           </p>
           <img
             src='/public/img/landscape/img-35.png'
-            className='w-[58px] md:w-[170px]'
+            className='w-24 md:w-[170px]'
           />
           <div className='flex flex-col gap-2.5'>
             <div className='flex justify-between items-center'>
@@ -101,7 +101,7 @@ const EpisodeList = () => {
           </p>
           <img
             src='/public/img/landscape/img-36.png'
-            className='w-[58px] md:w-[170px]'
+            className='w-24 md:w-[170px]'
           />
           <div className='flex flex-col gap-2.5'>
             <div className='flex justify-between items-center'>

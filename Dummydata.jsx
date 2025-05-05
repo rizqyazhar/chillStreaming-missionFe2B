@@ -225,7 +225,7 @@ const Dummydata = [
   },
   {
     id: "29",
-    title: "Sonic 2",
+    title: "The Devil All The Time",
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
@@ -233,7 +233,7 @@ const Dummydata = [
   },
   {
     id: "30",
-    title: "Guardian Of The Galaxy",
+    title: "Ted Lasso",
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
@@ -241,7 +241,7 @@ const Dummydata = [
   },
   {
     id: "31",
-    title: "Spiderman",
+    title: "Don't Look Up",
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
