@@ -4,15 +4,21 @@ import Content from "../fragments/Content";
 import PotraitCardBox from "../fragments/PotraitCardBox";
 import LandscapeCardBox from "../fragments/LandscapeCardBox";
 
-const HomePage = () => {
+const HomePage = ({ setListingAdd }) => {
   return (
     <HomeLayout>
       <Hero />
       <Content>
-        <LandscapeCardBox title='Melanjutkan Tonton Film' />
-        <PotraitCardBox title='Top Rating Film dan Series Hari ini' />
-        <PotraitCardBox title='Film Trending' />
-        <PotraitCardBox title='Rilis Baru' />
+        <LandscapeCardBox
+          title='Melanjutkan Tonton Film'
+          setListingAdd={setListingAdd}
+        />
+        <PotraitCardBox
+          title='Top Rating Film dan Series Hari ini'
+          setListingAdd={setListingAdd}
+        />
+        <PotraitCardBox title='Film Trending' setListingAdd={setListingAdd} />
+        <PotraitCardBox title='Rilis Baru' setListingAdd={setListingAdd} />
       </Content>
     </HomeLayout>
   );

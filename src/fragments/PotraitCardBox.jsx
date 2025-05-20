@@ -1,4 +1,3 @@
-import { useState } from "react";
 import PotraitCard from "../elements/PotraitCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,15 +5,16 @@ import "slick-carousel/slick/slick-theme.css";
 import PopUp from "../fragments/Popup";
 import Dummydata from "../../Dummydata";
 import { NextArrow, PrevArrow } from "../elements/Arrows";
+import { useState } from "react";
 
-const PotraitCardBox = ({ title }) => {
+const PotraitCardBox = ({ title, listingAdd, setListingAdd }) => {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [openPopup, setPopup] = useState(false);
+
   const handleOpenPopup = (movie) => {
     setSelectedMovie(movie);
     setPopup((prev) => !prev);
   };
-
   const randomInitialSlide = () => Math.floor(Math.random() * Dummydata.length);
 
   const settings = {
@@ -78,6 +78,9 @@ const PotraitCardBox = ({ title }) => {
             genre={selectedMovie.genre}
             age={selectedMovie.age}
             eps={selectedMovie.episode}
+            listingAdd={listingAdd}
+            setListingAdd={setListingAdd}
+            selectedMovie={selectedMovie}
           />
         )}
       </div>
