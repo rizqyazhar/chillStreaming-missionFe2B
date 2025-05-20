@@ -1,14 +1,14 @@
-import HomeLayout from "../layouts/HomeLayout";
 import Hero from "../fragments/Hero";
 import Content from "../fragments/Content";
 import PotraitCardBox from "../fragments/PotraitCardBox";
 import LandscapeCardBox from "../fragments/LandscapeCardBox";
 import Genre from "../fragments/genre/Genre";
+import { Fragment } from "react";
 import GenreTab from "../fragments/genre/GenreTab";
 
 const SeriesPage = () => {
   return (
-    <HomeLayout genreTab={<GenreTab width='100px' />}>
+    <Fragment genreTab={<GenreTab width='100px' />}>
       <Hero>
         <Genre width='392px' />
       </Hero>
@@ -19,7 +19,7 @@ const SeriesPage = () => {
         <PotraitCardBox title='Series Trending' />
         <PotraitCardBox title='Rilis Baru' />
       </Content>
-    </HomeLayout>
+    </Fragment>
   );
 };
 

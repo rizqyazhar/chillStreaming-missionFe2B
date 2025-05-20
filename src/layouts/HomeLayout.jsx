@@ -1,11 +1,12 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "../fragments/Navbar";
 import Footer from "../fragments/Footer";
 
-const HomeLayout = ({ children, genreTab }) => {
+const HomeLayout = ({ genreTab }) => {
   return (
     <>
       <Navbar genreTab={genreTab} />
-      {children}
+      <Outlet />
       <Footer />
     </>
   );

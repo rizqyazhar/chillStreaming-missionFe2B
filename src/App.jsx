@@ -8,27 +8,33 @@ import MylistPage from "./pages/MylistPage";
 import ProfilePage from "./pages/ProfilePage";
 import MembershipPage from "./pages/MembershipPage";
 import PurchasePage from "./pages/PurchasePage";
+import HomeLayout from "./layouts/HomeLayout";
 
 const App = () => {
   const router = createBrowserRouter([
     { path: "/", element: <LoginPage /> },
     { path: "/register", element: <RegisterPage /> },
     {
-      path: "/home",
-      element: <HomePage />,
+      element: <HomeLayout />,
+      children: [
+        {
+          path: "/home",
+          element: <HomePage />,
+        },
+        {
+          path: "/films",
+          element: <FilmsPage />,
+        },
+        {
+          path: "/series",
+          element: <SeriesPage />,
+        },
+        { path: "/mylist", element: <MylistPage /> },
+        { path: "/profile", element: <ProfilePage /> },
+        { path: "/membership", element: <MembershipPage /> },
+        { path: "/purchase", element: <PurchasePage /> },
+      ],
     },
-    {
-      path: "/films",
-      element: <FilmsPage />,
-    },
-    {
-      path: "/series",
-      element: <SeriesPage />,
-    },
-    { path: "/mylist", element: <MylistPage /> },
-    { path: "/profile", element: <ProfilePage /> },
-    { path: "/membership", element: <MembershipPage /> },
-    { path: "/purchase", element: <PurchasePage /> },
   ]);
   return <RouterProvider router={router} />;
 };

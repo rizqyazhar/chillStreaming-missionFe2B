@@ -1,11 +1,11 @@
+import { Fragment } from "react";
 import Mylist from "../fragments/Mylist";
-import HomeLayout from "../layouts/HomeLayout";
 
-const MylistPage = ({ listingAdd }) => {
+const MylistPage = () => {
   return (
-    <HomeLayout>
-      <Mylist listingAdd={listingAdd} />
-    </HomeLayout>
+    <Fragment>
+      <Mylist />
+    </Fragment>
   );
 };
 

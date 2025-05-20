@@ -1,4 +1,3 @@
-import HomeLayout from "../layouts/HomeLayout";
 import Hero from "../fragments/Hero";
 import Content from "../fragments/Content";
 import PotraitCardBox from "../fragments/PotraitCardBox";
@@ -6,7 +5,7 @@ import LandscapeCardBox from "../fragments/LandscapeCardBox";
 
 const HomePage = () => {
   return (
-    <HomeLayout>
+    <>
       <Hero />
       <Content>
         <LandscapeCardBox title='Melanjutkan Tonton Film' />
@@ -14,7 +13,7 @@ const HomePage = () => {
         <PotraitCardBox title='Film Trending' />
         <PotraitCardBox title='Rilis Baru' />
       </Content>
-    </HomeLayout>
+    </>
   );
 };
 
