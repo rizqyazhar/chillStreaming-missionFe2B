@@ -7,7 +7,7 @@ import PopUp from "../fragments/Popup";
 import Dummydata from "../../Dummydata";
 import { NextArrow, PrevArrow } from "../elements/Arrows";
 
-const LandscapeCardBox = ({ title, listingAdd, setListingAdd }) => {
+const LandscapeCardBox = ({ title }) => {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [openPopup, setPopup] = useState(false);
   const handleOpenPopup = (movie) => {
@@ -82,8 +82,6 @@ const LandscapeCardBox = ({ title, listingAdd, setListingAdd }) => {
             genre={selectedMovie.genre}
             age={selectedMovie.age}
             eps={selectedMovie.episode}
-            listingAdd={listingAdd}
-            setListingAdd={setListingAdd}
           />
         )}
       </div>

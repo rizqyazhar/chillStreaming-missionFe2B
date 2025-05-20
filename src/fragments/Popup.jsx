@@ -2,31 +2,12 @@ import { IoVolumeMuteSharp } from "react-icons/io5";
 import EpisodeList from "../elements/EpisodeList";
 import SimilarRecommend from "../elements/SimilarRecommend";
 
-const PopUp = ({
-  openPopup,
-  setPopup,
-  isSeries,
-  title,
-  genre,
-  age,
-  eps,
-  listingAdd,
-  setListingAdd,
-  selectedMovie,
-}) => {
+const PopUp = ({ openPopup, setPopup, isSeries, title, genre, age, eps }) => {
   const handleClosePopup = () => {
     setPopup((prev) => !prev);
   };
 
-  const handleAddBtn = () => {
-    const isExist = listingAdd.some((item) => item.id === selectedMovie.id);
-    if (isExist) return;
-
-    const updatedList = [...listingAdd, selectedMovie];
-    setListingAdd(updatedList);
-
-    localStorage.setItem("myList", JSON.stringify(updatedList));
-  };
+  const handleAddBtn = () => {};
 
   return (
     <>
