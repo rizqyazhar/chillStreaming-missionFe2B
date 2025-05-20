@@ -1,11 +1,11 @@
 import { IoVolumeMuteSharp } from "react-icons/io5";
 import EpisodeList from "../elements/EpisodeList";
 import SimilarRecommend from "../elements/SimilarRecommend";
+import { useContext } from "react";
+import { ListContext } from "../state/ContextState";
 
-const PopUp = ({ openPopup, setPopup, isSeries, title, genre, age, eps }) => {
-  const handleClosePopup = () => {
-    setPopup((prev) => !prev);
-  };
+const PopUp = ({ isSeries, title, genre, age, eps }) => {
+  const { openPopup, handleClosePopup } = useContext(ListContext);
 
   const handleAddBtn = () => {};
 

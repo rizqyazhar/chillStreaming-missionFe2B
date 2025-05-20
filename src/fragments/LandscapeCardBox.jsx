@@ -1,4 +1,3 @@
-import { useState } from "react";
 import LandscapeCard from "../elements/LandscapeCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,14 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import PopUp from "../fragments/Popup";
 import Dummydata from "../../Dummydata";
 import { NextArrow, PrevArrow } from "../elements/Arrows";
+import { useContext } from "react";
+import { ListContext } from "../state/ContextState";
 
 const LandscapeCardBox = ({ title }) => {
-  const [selectedMovie, setSelectedMovie] = useState(null);
-  const [openPopup, setPopup] = useState(false);
-  const handleOpenPopup = (movie) => {
-    setSelectedMovie(movie);
-    setPopup((prev) => !prev);
-  };
+  const { openPopup, selectedMovie, handleOpenPopup } = useContext(ListContext);
 
   const randomInitialSlide = () => Math.floor(Math.random() * Dummydata.length);
 
@@ -75,7 +71,6 @@ const LandscapeCardBox = ({ title }) => {
         {selectedMovie && (
           <PopUp
             openPopup={openPopup}
-            setPopup={setPopup}
             isSeries={true}
             key={selectedMovie.id}
             title={selectedMovie.title}
