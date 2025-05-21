@@ -4,8 +4,9 @@ import { IoVolumeMuteSharp } from "react-icons/io5";
 import EpisodeList from "../elements/EpisodeList";
 import SimilarRecommend from "../elements/SimilarRecommend";
 import PopupMessage from "../elements/popupMessage/PopupMessage";
+import { useLocation } from "react-router";
 
-const PopUp = ({ isSeries, id, title, genre, age, eps }) => {
+const PopUp = ({ id, title, genre, age, eps }) => {
   const {
     openPopup,
     handleClosePopup,
@@ -14,6 +15,18 @@ const PopUp = ({ isSeries, id, title, genre, age, eps }) => {
     messageAfterMovieAdded,
   } = useContext(ListContext);
 
+  const location = useLocation();
+  const searchLocation = () => {
+    const seriesLocation = location.pathname === "/series";
+    const filmsLocation = location.pathname === "/films";
+    if (seriesLocation) {
+      return "seriesPage";
+    } else if (filmsLocation) {
+      return "filmsPage";
+    } else {
+      return null;
+    }
+  };
   return (
     <>
       {openPopup && (
@@ -130,7 +143,12 @@ const PopUp = ({ isSeries, id, title, genre, age, eps }) => {
                   </tbody>
                 </table>
               </div>
-              {isSeries ? <EpisodeList /> : <SimilarRecommend />}
+              {searchLocation() === "seriesPage" ||
+              searchLocation() === null ? (
+                <EpisodeList />
+              ) : (
+                <SimilarRecommend />
+              )}
             </div>
           </div>
         </>

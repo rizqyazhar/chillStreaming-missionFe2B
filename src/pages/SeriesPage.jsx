@@ -18,7 +18,6 @@ const SeriesPage = () => {
         <PotraitCardBox title='Rilis Baru' />
       </Content>
     </>
-    // genreTab={<GenreTab width='100px'
   );
 };
 

@@ -71,7 +71,6 @@ const LandscapeCardBox = ({ title }) => {
         {selectedMovie && (
           <PopUp
             openPopup={openPopup}
-            isSeries={true}
             key={selectedMovie.id}
             title={selectedMovie.title}
             genre={selectedMovie.genre}
