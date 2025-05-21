@@ -7,10 +7,7 @@ const EpisodeList = () => {
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             1
           </p>
-          <img
-            src='/public/img/landscape/img-32.png'
-            className='w-24 md:w-[170px]'
-          />
+          <img src='/img/landscape/img-32.png' className='w-24 md:w-[170px]' />
           <div className='flex flex-col gap-1 md:gap-2.5'>
             <div className='flex justify-between items-center'>
               <p className='text-light-primary font-semibold text-xs md:text-lg'>
@@ -30,10 +27,7 @@ const EpisodeList = () => {
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             2
           </p>
-          <img
-            src='/public/img/landscape/img-33.png'
-            className='w-24 md:w-[170px]'
-          />
+          <img src='/img/landscape/img-33.png' className='w-24 md:w-[170px]' />
           <div className='flex flex-col gap-2.5'>
             <div className='flex justify-between items-center'>
               <p className='text-light-primary font-semibold text-xs md:text-lg'>
@@ -53,10 +47,7 @@ const EpisodeList = () => {
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             3
           </p>
-          <img
-            src='/public/img/landscape/img-34.png'
-            className='w-24 md:w-[170px]'
-          />
+          <img src='/img/landscape/img-34.png' className='w-24 md:w-[170px]' />
           <div className='flex flex-col gap-2.5'>
             <div className='flex justify-between items-center'>
               <p className='text-light-primary font-semibold text-xs md:text-lg'>
@@ -76,10 +67,7 @@ const EpisodeList = () => {
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             4
           </p>
-          <img
-            src='/public/img/landscape/img-35.png'
-            className='w-24 md:w-[170px]'
-          />
+          <img src='/img/landscape/img-35.png' className='w-24 md:w-[170px]' />
           <div className='flex flex-col gap-2.5'>
             <div className='flex justify-between items-center'>
               <p className='text-light-primary font-semibold text-xs md:text-lg'>
@@ -99,10 +87,7 @@ const EpisodeList = () => {
           <p className='text-light-primary font-normal md:font-semibold text-xs md:text-lg'>
             5
           </p>
-          <img
-            src='/public/img/landscape/img-36.png'
-            className='w-24 md:w-[170px]'
-          />
+          <img src='/img/landscape/img-36.png' className='w-24 md:w-[170px]' />
           <div className='flex flex-col gap-2.5'>
             <div className='flex justify-between items-center'>
               <p className='text-light-primary font-semibold text-xs md:text-lg'>

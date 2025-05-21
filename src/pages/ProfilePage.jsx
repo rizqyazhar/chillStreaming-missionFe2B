@@ -13,7 +13,7 @@ const ProfilePage = () => {
             </h3>
             <div className='flex items-center gap-12'>
               <img
-                src='/public/img/icon/big-avatar.svg'
+                src='/img/icon/big-avatar.svg'
                 className='w-20 h-20 md:w-[140px] md:h-[140px]'
               />
               <div className='flex flex-col gap-2.5'>
@@ -21,7 +21,7 @@ const ProfilePage = () => {
                   Ubah Foto
                 </button>
                 <p className='flex items-center md:gap-1'>
-                  <img src='/public/img/icon/file-upload-outline.svg' />
+                  <img src='/img/icon/file-upload-outline.svg' />
                   <span className='font-lato font-normal text-xs md:text-sm text-light-secondary cursor-default'>
                     Maksimal 2MB
                   </span>
@@ -70,10 +70,7 @@ const ProfilePage = () => {
             </form>
           </div>
           <div className='w-fit h-fit md:w-96 xl:w-[558px] 2xl:w-full md:mt-[77px] row-start-1 row-end-2 md:row-start-1 md:row-end-2 md:col-start-3 md:col-end-3 flex gap-3 md:gap-5 p-4 md:p-6 rounded-xl bg-extraBackground'>
-            <img
-              src='/public/img/icon/warning.svg'
-              className='md:w-[78px] h-fit'
-            />
+            <img src='/img/icon/warning.svg' className='md:w-[78px] h-fit' />
             <div className='w-full flex flex-col gap-3 font-lato text-light-primary'>
               <h4 className='font-bold text-lg md:text-2xl'>
                 Saat ini anda belum berlangganan

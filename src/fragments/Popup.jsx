@@ -37,13 +37,13 @@ const PopUp = ({ isSeries, id, title, genre, age, eps }) => {
               <div
                 className='relative w-full h-48 md:h-[554px] md:px-16 bg-cover bg-center flex flex-col justify-end items-start md:pb-[106px]'
                 style={{
-                  backgroundImage: "url(/public/img/landscape/popupimage.png)",
+                  backgroundImage: "url(/img/landscape/popupimage.png)",
                 }}>
                 <div
                   className='absolute top-2 right-2 md:top-5 md:right-5 flex items-center justify-center text-light-secondary text-lg rounded-full p-1 md:p-2 w-4 h-4 md:w-[30px] md:h-[30px] bg-pageHeaderBackground cursor-pointer z-50'
                   onClick={handleClosePopup}>
                   <img
-                    src='/public/img/icon/close-btn.svg'
+                    src='/img/icon/close-btn.svg'
                     className='w-1.5 h-1.5 md:w-3.5 md:h-3.5'
                   />
                 </div>
