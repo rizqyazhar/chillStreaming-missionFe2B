@@ -4,18 +4,18 @@ import SimilarRecommend from "../elements/SimilarRecommend";
 import { useContext } from "react";
 import { ListContext } from "../state/ContextState";
 
-const PopUp = ({ isSeries, title, genre, age, eps }) => {
-  const { openPopup, handleClosePopup } = useContext(ListContext);
-
-  const handleAddBtn = () => {};
+const PopUp = ({ isSeries, id, title, genre, age, eps }) => {
+  const { openPopup, handleClosePopup, handleAddBtn } = useContext(ListContext);
 
   return (
     <>
       {openPopup && (
         <div
           className='
-        fixed inset-0 pt-20 z-50 flex justify-center items-start transition-colors visible bg-black/70'>
-          <div className='w-11/12 md:w-1/2 h-11/12 z-20 font-lato rounded-tl-sm md:rounded-tl-2xl rounded-tr-sm md:rounded-tr-2xl overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-pageHeaderBackground'>
+            fixed inset-0 pt-20 z-10 flex justify-center items-start transition-colors visible bg-black/70'>
+          <div
+            key={id}
+            className='relative w-11/12 md:w-1/2 h-11/12 font-lato rounded-tl-sm md:rounded-tl-2xl rounded-tr-sm md:rounded-tr-2xl overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-pageHeaderBackground'>
             <div
               className='relative w-full h-48 md:h-[554px] md:px-16 bg-cover bg-center flex flex-col justify-end items-start md:pb-[106px]'
               style={{
@@ -49,7 +49,7 @@ const PopUp = ({ isSeries, title, genre, age, eps }) => {
                   </button>
                 </div>
               </div>
-              <div className='absolute inset-0 bg-black/20 z-40'></div>
+              <div className='absolute inset-0 bg-black/20 z-10'></div>
               <div className='absolute inset-x-0 bottom-0 w-full h-60 bg-linear-to-t from-pageHeaderBackground from-10% to-black/0 to-99%'></div>
             </div>
             <div className='bg-pageHeaderBackground text-light-primary px-5 py-2.5 md:px-16 md:py-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2.5'>
