@@ -6,14 +6,28 @@ import SimilarRecommend from "../elements/SimilarRecommend";
 import PopupMessage from "../elements/popupMessage/PopupMessage";
 
 const PopUp = ({ isSeries, id, title, genre, age, eps }) => {
-  const { openPopup, handleClosePopup, handleAddBtn, message } =
-    useContext(ListContext);
+  const {
+    openPopup,
+    handleClosePopup,
+    handleAddBtn,
+    message,
+    messageAfterMovieAdded,
+  } = useContext(ListContext);
 
   return (
     <>
       {openPopup && (
         <>
-          {message && <PopupMessage text={"Successfully added to my list"} />}
+          {message && (
+            <PopupMessage
+              boolForIcon={messageAfterMovieAdded}
+              text={
+                messageAfterMovieAdded
+                  ? "Successfully added to my list"
+                  : "This item is already in your list"
+              }
+            />
+          )}
           <div
             className='
             fixed inset-0 pt-20 z-10 flex justify-center items-start transition-colors visible bg-black/70'>
@@ -43,7 +57,7 @@ const PopUp = ({ isSeries, id, title, genre, age, eps }) => {
                         Mulai
                       </button>
                       <button
-                        className='w-6 md:w-11 h-6 md:h-11 border border-light-secondary rounded-full text-light-secondary text-sm md:text-2xl font-bold cursor-pointer'
+                        className='w-6 md:w-11 h-6 md:h-11 border border-light-secondary rounded-full text-light-secondary text-sm md:text-2xl font-bold cursor-pointer hover:bg-paperBackground transition-all'
                         onClick={handleAddBtn}>
                         +
                       </button>

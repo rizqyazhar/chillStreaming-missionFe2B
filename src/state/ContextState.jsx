@@ -8,6 +8,7 @@ const ListProvider = ({ children }) => {
   const [movieLists, setMovieLists] = useState([]);
   const [openPopup, setPopup] = useState(false);
   const [message, setMessage] = useState(false);
+  const [messageAfterMovieAdded, setMessageAfterMovieAdded] = useState(null);
 
   const handleOpenPopup = (movie) => {
     setSelectedMovie(movie);
@@ -20,12 +21,13 @@ const ListProvider = ({ children }) => {
   };
 
   const handleAddBtn = () => {
-    const movieId = movieLists.map((m) => m.id);
-    console.log(movieId);
-    // if (addSelectedMovie.id === movieId) {
-    // }
-    setMovieLists((prev) => [...prev, addSelectedMovie]);
-
+    const isMovieAdded = movieLists.some((m) => m.id === addSelectedMovie.id);
+    if (!isMovieAdded) {
+      setMovieLists((prev) => [...prev, addSelectedMovie]);
+      setMessageAfterMovieAdded(true);
+    } else {
+      setMessageAfterMovieAdded(false);
+    }
     timer();
   };
 
@@ -49,6 +51,8 @@ const ListProvider = ({ children }) => {
         setMovieLists,
         message,
         timer,
+        messageAfterMovieAdded,
+        setMessageAfterMovieAdded,
       }}>
       {children}
     </ListContext.Provider>

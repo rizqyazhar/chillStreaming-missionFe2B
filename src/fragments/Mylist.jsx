@@ -5,17 +5,38 @@ import PotraitCard from "../elements/PotraitCard";
 import PopupMessage from "../elements/popupMessage/PopupMessage";
 
 const MyList = () => {
-  const { movieLists, setMovieLists, timer, message } = useContext(ListContext);
+  const {
+    movieLists,
+    setMovieLists,
+    timer,
+    message,
+    messageAfterMovieAdded,
+    setMessageAfterMovieAdded,
+  } = useContext(ListContext);
 
   const handleDeleteLists = () => {
     setMovieLists([]);
+    if (movieLists.length === 0) {
+      setMessageAfterMovieAdded(false);
+    } else {
+      setMessageAfterMovieAdded(true);
+    }
     timer();
   };
 
   return (
     <Content>
       <section className='w-11/12 relative flex flex-col mx-auto gap-5 md:gap-8 py-5 md:py-10'>
-        {message && <PopupMessage text={"Your list has been cleared"} />}
+        {message && (
+          <PopupMessage
+            boolForIcon={messageAfterMovieAdded}
+            text={
+              messageAfterMovieAdded
+                ? "Your list has been cleared"
+                : "There's nothing to clear"
+            }
+          />
+        )}
         <div className='flex justify-between items-center'>
           <h3 className='font-lato font-bold text-xl md:text-[32px] text-white cursor-default'>
             Daftar Saya
