@@ -61,7 +61,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-8.png", "/img/landscape/img-8.png"],
+    img: ["/img/potrait/img-8.png", "/img/landscape/img-12.png"],
   },
   {
     id: "9",
@@ -69,7 +69,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-9.png", "/img/landscape/img-9.png"],
+    img: ["/img/potrait/img-9.png", "/img/landscape/img-17.png"],
   },
   {
     id: "10",
@@ -77,7 +77,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-10.png", "/img/landscape/img-10.png"],
+    img: ["/img/potrait/img-10.png", "/img/landscape/img-9.png"],
   },
   {
     id: "11",
@@ -85,7 +85,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-11.png", "/img/landscape/img-11.png"],
+    img: ["/img/potrait/img-11.png", "/img/landscape/img-18.png"],
   },
   {
     id: "12",
@@ -93,7 +93,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-12.png", "/img/landscape/img-12.png"],
+    img: ["/img/potrait/img-12.png", "/img/landscape/img-10.png"],
   },
   {
     id: "13",
@@ -101,7 +101,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-13.png", "/img/landscape/img-13.png"],
+    img: ["/img/potrait/img-13.png", "/img/landscape/img-19.png"],
   },
   {
     id: "14",
@@ -109,7 +109,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-14.png", "/img/landscape/img-14.png"],
+    img: ["/img/potrait/img-14.png", "/img/landscape/img-11.png"],
   },
   {
     id: "15",
@@ -117,7 +117,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-15.png", "/img/landscape/img-15.png"],
+    img: ["/img/potrait/img-15.png", "/img/landscape/img-20.png"],
   },
   {
     id: "16",
@@ -125,7 +125,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-16.png", "/img/landscape/img-16.png"],
+    img: ["/img/potrait/img-16.png", "/img/landscape/img-25.png"],
   },
   {
     id: "17",
@@ -141,7 +141,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-18.png", "/img/landscape/img-18.png"],
+    img: ["/img/potrait/img-18.png", "/img/landscape/img-26.png"],
   },
   {
     id: "19",
@@ -149,7 +149,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-19.png", "/img/landscape/img-19.png"],
+    img: ["/img/potrait/img-19.png", "/img/landscape/img-27.png"],
   },
   {
     id: "20",
@@ -157,7 +157,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-20.png", "/img/landscape/img-20.png"],
+    img: ["/img/potrait/img-20.png", "/img/landscape/img-31.png"],
   },
   {
     id: "21",
@@ -165,7 +165,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-21.png", "/img/landscape/img-21.png"],
+    img: ["/img/potrait/img-21.png", "/img/landscape/img-28.png"],
   },
   {
     id: "22",
@@ -173,7 +173,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-22.png", "/img/landscape/img-22.png"],
+    img: ["/img/potrait/img-22.png", "/img/landscape/img-29.png"],
   },
   {
     id: "23",
@@ -181,7 +181,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-23.png", "/img/landscape/img-23.png"],
+    img: ["/img/potrait/img-23.png", "/img/landscape/img-30.png"],
   },
   {
     id: "24",
@@ -189,7 +189,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-24.png", "/img/landscape/img-24.png"],
+    img: ["/img/potrait/img-24.png", "/img/landscape/img-13.png"],
   },
   {
     id: "25",
@@ -197,7 +197,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-25.png", "/img/landscape/img-25.png"],
+    img: ["/img/potrait/img-25.png", "/img/landscape/img-21.png"],
   },
   {
     id: "26",
@@ -205,7 +205,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-26.png", "/img/landscape/img-26.png"],
+    img: ["/img/potrait/img-26.png", "/img/landscape/img-10.png"],
   },
   {
     id: "27",
@@ -213,39 +213,7 @@ const Dummydata = [
     genre: ["Misteri", "Fantasi", "Kriminal"],
     age: "16+",
     episode: "16",
-    img: ["/img/potrait/img-27.png", "/img/landscape/img-27.png"],
-  },
-  {
-    id: "28",
-    title: "Happiness",
-    genre: ["Misteri", "Fantasi", "Kriminal"],
-    age: "16+",
-    episode: "16",
-    img: ["/img/potrait/img-28.png", "/img/landscape/img-28.png"],
-  },
-  {
-    id: "29",
-    title: "The Devil All The Time",
-    genre: ["Misteri", "Fantasi", "Kriminal"],
-    age: "16+",
-    episode: "16",
-    img: ["/img/potrait/img-29.png", "/img/landscape/img-29.png"],
-  },
-  {
-    id: "30",
-    title: "Ted Lasso",
-    genre: ["Misteri", "Fantasi", "Kriminal"],
-    age: "16+",
-    episode: "16",
-    img: ["/img/potrait/img-30.png", "/img/landscape/img-30.png"],
-  },
-  {
-    id: "31",
-    title: "Don't Look Up",
-    genre: ["Misteri", "Fantasi", "Kriminal"],
-    age: "16+",
-    episode: "16",
-    img: ["/img/potrait/img-31.png", "/img/landscape/img-31.png"],
+    img: ["/img/potrait/img-27.png", "/img/landscape/img-22.png"],
   },
 ];
 
