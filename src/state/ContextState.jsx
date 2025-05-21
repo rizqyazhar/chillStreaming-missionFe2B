@@ -7,6 +7,8 @@ const ListProvider = ({ children }) => {
   const [addSelectedMovie, setAddSelectedMovie] = useState(null);
   const [movieLists, setMovieLists] = useState([]);
   const [openPopup, setPopup] = useState(false);
+  const [message, setMessage] = useState(false);
+
   const handleOpenPopup = (movie) => {
     setSelectedMovie(movie);
     setAddSelectedMovie(movie);
@@ -19,6 +21,14 @@ const ListProvider = ({ children }) => {
 
   const handleAddBtn = () => {
     setMovieLists((prev) => [...prev, addSelectedMovie]);
+    timer();
+  };
+
+  const timer = () => {
+    setTimeout(() => {
+      setMessage((prev) => !prev);
+    }, 1000);
+    setMessage((prev) => !prev);
   };
 
   return (
@@ -31,6 +41,9 @@ const ListProvider = ({ children }) => {
         handleClosePopup,
         handleAddBtn,
         movieLists,
+        setMovieLists,
+        message,
+        timer,
       }}>
       {children}
     </ListContext.Provider>
