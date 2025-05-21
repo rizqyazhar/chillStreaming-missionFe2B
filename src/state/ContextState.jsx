@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 const ListContext = createContext();
 
@@ -7,7 +7,7 @@ const ListProvider = ({ children }) => {
   const [addSelectedMovie, setAddSelectedMovie] = useState(null);
   const [movieLists, setMovieLists] = useState([]);
   const [openPopup, setPopup] = useState(false);
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState(null);
   const [messageAfterMovieAdded, setMessageAfterMovieAdded] = useState(null);
 
   const handleOpenPopup = (movie) => {
@@ -19,6 +19,17 @@ const ListProvider = ({ children }) => {
   const handleClosePopup = () => {
     setPopup((prev) => !prev);
   };
+
+  useEffect(() => {
+    const savedMovies = localStorage.getItem("movieLists");
+    if (savedMovies) {
+      setMovieLists(JSON.parse(savedMovies));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("movieLists", JSON.stringify(movieLists));
+  }, [movieLists]);
 
   const handleAddBtn = () => {
     const isMovieAdded = movieLists.some((m) => m.id === addSelectedMovie.id);
@@ -32,10 +43,10 @@ const ListProvider = ({ children }) => {
   };
 
   const timer = () => {
+    setMessage(true);
     setTimeout(() => {
-      setMessage((prev) => !prev);
+      setMessage(false);
     }, 1000);
-    setMessage((prev) => !prev);
   };
 
   return (

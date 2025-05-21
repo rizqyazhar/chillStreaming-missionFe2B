@@ -15,12 +15,10 @@ const MyList = () => {
   } = useContext(ListContext);
 
   const handleDeleteLists = () => {
+    const movieListsLength = movieLists.length > 0;
     setMovieLists([]);
-    if (movieLists.length === 0) {
-      setMessageAfterMovieAdded(false);
-    } else {
-      setMessageAfterMovieAdded(true);
-    }
+    localStorage.removeItem("movieLists");
+    setMessageAfterMovieAdded(movieListsLength);
     timer();
   };
 
