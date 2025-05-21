@@ -5,11 +5,10 @@ import LandscapeCardBox from "../fragments/LandscapeCardBox";
 import Genre from "../fragments/genre/Genre";
 import GenreTab from "../fragments/genre/GenreTab";
 import PopUp from "../fragments/Popup";
-import { Fragment } from "react";
 
 const FilmsPage = () => {
   return (
-    <Fragment genreTab={<GenreTab width='100px' />}>
+    <>
       <Hero>
         <Genre width='392px' />
       </Hero>
@@ -20,7 +19,7 @@ const FilmsPage = () => {
         <PotraitCardBox title='Film Trending' />
         <PotraitCardBox title='Rilis Baru' />
       </Content>
-    </Fragment>
+    </>
   );
 };
 

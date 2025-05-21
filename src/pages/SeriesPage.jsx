@@ -3,12 +3,10 @@ import Content from "../fragments/Content";
 import PotraitCardBox from "../fragments/PotraitCardBox";
 import LandscapeCardBox from "../fragments/LandscapeCardBox";
 import Genre from "../fragments/genre/Genre";
-import { Fragment } from "react";
-import GenreTab from "../fragments/genre/GenreTab";
 
 const SeriesPage = () => {
   return (
-    <Fragment genreTab={<GenreTab width='100px' />}>
+    <>
       <Hero>
         <Genre width='392px' />
       </Hero>
@@ -19,7 +17,8 @@ const SeriesPage = () => {
         <PotraitCardBox title='Series Trending' />
         <PotraitCardBox title='Rilis Baru' />
       </Content>
-    </Fragment>
+    </>
+    // genreTab={<GenreTab width='100px'
   );
 };
 
