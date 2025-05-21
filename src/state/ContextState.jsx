@@ -20,7 +20,12 @@ const ListProvider = ({ children }) => {
   };
 
   const handleAddBtn = () => {
+    const movieId = movieLists.map((m) => m.id);
+    console.log(movieId);
+    // if (addSelectedMovie.id === movieId) {
+    // }
     setMovieLists((prev) => [...prev, addSelectedMovie]);
+
     timer();
   };
 

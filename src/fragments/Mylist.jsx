@@ -26,7 +26,7 @@ const MyList = () => {
             </p>
           </div>
         </div>
-        <div className='w-full flex flex-wrap gap-x-1 gap-y-4 md:gap-x-4 md:gap-y-8'>
+        <div className='w-full grid grid-cols-4 md:flex md:flex-wrap gap-x-2 gap-y-4 md:gap-x-4 md:gap-y-8'>
           {movieLists.map((movie) => (
             <PotraitCard key={movie.id} src={movie.img[0]} />
           ))}
