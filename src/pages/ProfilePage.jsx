@@ -1,11 +1,10 @@
 import SeeAll from "../elements/SeeAll";
 import Content from "../fragments/Content";
-import HomeLayout from "../layouts/HomeLayout";
 import Mylist from "../fragments/Mylist";
 
 const ProfilePage = () => {
   return (
-    <HomeLayout>
+    <>
       <Content>
         <section className='w-11/12 mb-20 relative grid auto-rows-2 md:auto-rows-1 md:grid-cols-2 mx-auto gap-5 md:gap-10 py-5 md:py-10'>
           <div className='row-start-2 row-end-3 md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-3 w-full flex flex-col gap-6 md:gap-8'>
@@ -91,7 +90,7 @@ const ProfilePage = () => {
         </section>
         <Mylist toggle={<SeeAll />} />
       </Content>
-    </HomeLayout>
+    </>
   );
 };
 
